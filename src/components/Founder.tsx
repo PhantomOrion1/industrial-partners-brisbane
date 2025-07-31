@@ -18,20 +18,19 @@ const Founder = () => {
 
         <div className="max-w-4xl mx-auto">
           <Card className="overflow-hidden shadow-strong">
-            <CardContent className="p-0">
-              <div className="grid lg:grid-cols-5 gap-0">
-                {/* Image Section - Made smaller */}
-                <div className="lg:col-span-2 relative h-80 lg:h-auto">
+            <CardContent className="p-8 lg:p-12">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                {/* Small Image Section */}
+                <div className="flex-shrink-0">
                   <img 
                     src="/lovable-uploads/2f527cab-acf8-4d29-8c28-64f3c64d035e.png" 
                     alt="John Legg Industrial Partners Principal"
-                    className="w-full h-full object-cover object-center"
+                    className="w-32 h-32 lg:w-40 lg:h-40 object-cover object-center rounded-lg shadow-medium"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent lg:bg-gradient-to-r"></div>
                 </div>
 
-                {/* Content Section - Takes more space */}
-                <div className="lg:col-span-3 p-8 lg:p-12 flex flex-col justify-center">
+                {/* Content Section */}
+                <div className="flex-1">
                   <div className="fade-in">
                     <div className="flex items-center mb-6">
                       <Badge variant="secondary" className="mr-3">Principal & Founder</Badge>
