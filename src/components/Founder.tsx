@@ -16,22 +16,22 @@ const Founder = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <Card className="overflow-hidden shadow-strong">
             <CardContent className="p-0">
-              <div className="grid lg:grid-cols-2 gap-0">
-                {/* Image Section */}
-                <div className="relative h-96 lg:h-auto">
+              <div className="grid lg:grid-cols-5 gap-0">
+                {/* Image Section - Made smaller */}
+                <div className="lg:col-span-2 relative h-80 lg:h-auto">
                   <img 
                     src="/lovable-uploads/2f527cab-acf8-4d29-8c28-64f3c64d035e.png" 
-                    alt="John Industrial Partners Principal"
-                    className="w-full h-full object-cover"
+                    alt="John Legg Industrial Partners Principal"
+                    className="w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent lg:bg-gradient-to-r"></div>
                 </div>
 
-                {/* Content Section */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                {/* Content Section - Takes more space */}
+                <div className="lg:col-span-3 p-8 lg:p-12 flex flex-col justify-center">
                   <div className="fade-in">
                     <div className="flex items-center mb-6">
                       <Badge variant="secondary" className="mr-3">Principal & Founder</Badge>
@@ -39,7 +39,7 @@ const Founder = () => {
                     </div>
 
                     <h3 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                      John Mitchell
+                      John Legg
                     </h3>
 
                     <p className="text-xl text-muted-foreground mb-6">
@@ -48,7 +48,7 @@ const Founder = () => {
 
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                       With over 25 years of experience in Brisbane's industrial property market, 
-                      John has established Industrial Partners as the city's most trusted name in 
+                      John Legg has established Industrial Partners as the city's most trusted name in 
                       warehouse sales and leasing. His deep understanding of the local market and 
                       commitment to client success has resulted in over 500 successful transactions.
                     </p>
@@ -88,7 +88,7 @@ const Founder = () => {
                         </div>
                         <div className="flex items-center">
                           <Mail className="w-4 h-4 text-muted-foreground mr-3" />
-                          <span className="text-foreground">john@industrialpartners.com.au</span>
+                          <span className="text-foreground">john.legg@industrialpartners.com.au</span>
                         </div>
                       </div>
                       
