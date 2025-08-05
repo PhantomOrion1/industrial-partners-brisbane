@@ -15,11 +15,9 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Properties', href: '#properties' },
     { name: 'About', href: '#about' },
-    { name: 'John Legg', href: '/john-legg' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Our Principle', href: '/john-legg' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -29,9 +27,9 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="font-bold text-2xl text-foreground">
+          <a href="/" className="font-bold text-2xl text-foreground hover:opacity-80 transition-fast">
             Industrial<span className="text-muted-foreground">Partners</span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -50,7 +48,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" size="sm" className="transition-smooth">
               <Phone className="w-4 h-4 mr-2" />
-              (07) 3000 0000
+              +61 414 727 052
             </Button>
           </div>
 
@@ -79,7 +77,7 @@ const Navigation = () => {
               ))}
               <Button variant="outline" size="sm" className="self-start transition-smooth">
                 <Phone className="w-4 h-4 mr-2" />
-                (07) 3000 0000
+                +61 414 727 052
               </Button>
             </div>
           </div>

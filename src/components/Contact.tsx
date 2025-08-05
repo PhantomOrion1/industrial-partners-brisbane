@@ -9,13 +9,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "(07) 3000 0000",
+      details: "+61 414 727 052",
       description: "Speak with our experts"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@industrialpartners.com.au",
+      details: "john@industrialpartners.com.au",
       description: "Send us a message"
     },
     {
