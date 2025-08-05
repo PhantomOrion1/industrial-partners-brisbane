@@ -24,7 +24,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-4 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'opacity-0 pointer-events-none' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
@@ -34,7 +34,7 @@ const Navigation = () => {
             <img
               src={`${basePath}WhiteIndustryPartnersLogo (2).png`}
               alt="Industrial Partners Logo"
-              className="h-16 md:h-28 w-auto object-contain"
+              className="h-14 md:h-24 w-auto object-contain"
             />
           </Link>
 
