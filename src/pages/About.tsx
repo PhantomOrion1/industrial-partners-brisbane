@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { ChevronDown, ChevronUp } from 'lucide-react';
 import { basePath } from '@/utils/path';
 
 const About = () => {
@@ -14,55 +15,58 @@ const About = () => {
   const newsArticles = [
     {
       id: 1,
-      title: "Industrial Partners Celebrates Record Breaking Year",
       image: `${basePath}lovable-uploads/bf000c07-91ab-432a-8dd3-af325fceac16.png`,
+      alt: "News article about trucks moving in on real bargain deal",
     },
     {
       id: 2,
-      title: "Major Warehouse Development Announced",
       image: `${basePath}lovable-uploads/75350691-2885-417d-bd15-89d568415c8e.png`,
+      alt: "News article about export firm's expansion plans",
     },
     {
       id: 3,
-      title: "Queensland Industrial Market Outlook",
       image: `${basePath}lovable-uploads/760bdee3-24bf-4cad-a585-1093dd29fc70.png`,
+      alt: "News article about fencing supplier consolidation",
     }
   ];
 
   const recentSales = [
-    { address: "25 Industrial Drive, Acacia Ridge", price: "$2.8M", size: "4,500m²" },
-    { address: "142 Main Street, Rocklea", price: "$1.6M", size: "2,800m²" },
-    { address: "88 Transport Road, Carole Park", price: "$3.2M", size: "5,200m²" },
-    { address: "15 Logistics Lane, Brendale", price: "$2.1M", size: "3,400m²" },
-    { address: "67 Warehouse Way, Yatala", price: "$4.5M", size: "7,100m²" },
-    { address: "203 Commerce Court, Stapylton", price: "$1.9M", size: "3,100m²" },
-    { address: "156 Distribution Drive, Heathwood", price: "$2.7M", size: "4,200m²" },
-    { address: "89 Factory Street, Darra", price: "$1.4M", size: "2,200m²" },
-    { address: "345 Trade Circuit, Wacol", price: "$3.8M", size: "6,000m²" },
-    { address: "78 Business Boulevard, Tingalpa", price: "$2.3M", size: "3,700m²" },
-    { address: "234 Enterprise Way, Pinkenba", price: "$5.1M", size: "8,200m²" },
-    { address: "91 Industry Road, Eagle Farm", price: "$1.8M", size: "2,900m²" },
-    { address: "167 Cargo Close, Hemmant", price: "$2.6M", size: "4,100m²" },
-    { address: "112 Supply Street, Murarrie", price: "$3.4M", size: "5,500m²" },
-    { address: "298 Freight Avenue, Lytton", price: "$2.0M", size: "3,200m²" }
+    { address: "2365 Ipswich Rd Oxley", price: "$4.9M" },
+    { address: "81 Grindle Rd Rocklea", price: "$3.0M" },
+    { address: "33 Dunn Rd, Rocklea", price: "$3.2M" },
+    { address: "9 Railway Pde, Rocklea", price: "$7.8M" },
+    { address: "13 Murdoch Crt, Acacia Ridge", price: "$4.2M" },
+    { address: "100 Grindle Rd, Rocklea", price: "$3.2M" },
+    { address: "106 Medway St, Rocklea", price: "$5.8M" },
+    { address: "38 Suscatand St, Rocklea", price: "$4.5M" },
+    { address: "5 Shoebury St, Rocklea", price: "$2.0M" },
+    { address: "35 Shettleston St, Rocklea", price: "$1.2M" },
+    { address: "2 Jaybel St, Salisbury", price: "$1.2M" },
+    { address: "45 Suscatand St, Rocklea", price: "$3.8M" },
+    { address: "6 Permarig Pl, Rocklea", price: "$2.3M" },
+    { address: "67 Noosa St, Heathwood", price: "$1.3M" },
+    { address: "10 Shoebury St, Rocklea", price: "$1.2M" },
+    { address: "10 Shoebury St, Rocklea", price: "$1.4M" },
+    { address: "14 Counihan St, SM Rocks", price: "$2.5M" },
+    { address: "80 Industrial Ave, Wacol", price: "$3.1M" }
   ];
 
   const recentLeases = [
-    { address: "45 Progress Road, Richlands", rent: "$180/m²", size: "2,200m²" },
-    { address: "78 Manufacturing Drive, Oxley", rent: "$165/m²", size: "3,100m²" },
-    { address: "123 Production Place, Inala", rent: "$155/m²", size: "1,800m²" },
-    { address: "267 Assembly Avenue, Archerfield", rent: "$190/m²", size: "4,500m²" },
-    { address: "89 Processing Street, Larapinta", rent: "$170/m²", size: "2,700m²" },
-    { address: "156 Operations Way, Durack", rent: "$175/m²", size: "3,300m²" },
-    { address: "334 Facility Road, Seventeen Mile Rocks", rent: "$160/m²", size: "2,100m²" },
-    { address: "201 Workshop Circuit, Sumner", rent: "$185/m²", size: "3,800m²" },
-    { address: "112 Storage Street, Willawong", rent: "$150/m²", size: "1,500m²" },
-    { address: "78 Handling Road, Berrinba", rent: "$195/m²", size: "5,200m²" },
-    { address: "245 Logistics Loop, Coopers Plains", rent: "$165/m²", size: "2,900m²" },
-    { address: "189 Terminal Drive, Mooroka", rent: "$180/m²", size: "3,600m²" },
-    { address: "90 Dispatch Drive, Nathan", rent: "$170/m²", size: "2,400m²" },
-    { address: "167 Fulfilment Way, Mount Gravatt East", rent: "$175/m²", size: "3,200m²" },
-    { address: "134 Depot Street, Calamvale", rent: "$160/m²", size: "2,000m²" }
+    { address: "2-6 Leda Dr, Burleigh", rent: "$275/m²", tenant: "Harvey Norman" },
+    { address: "47 Bluestone Cct, Seventeen Mile Rocks", rent: "$185/m²", tenant: "Kimberly Clark" },
+    { address: "140 Delta St, Geebung", rent: "$230/m²", tenant: "Energex" },
+    { address: "45 Grindle Rd, Rocklea", rent: "$175/m²", tenant: "Coca Cola" },
+    { address: "33 Dunn Rd, Rocklea", rent: "$165/m²", tenant: "OTIS" },
+    { address: "80 Industrial Ave, Wacol", rent: "$155/m²", tenant: "Bridgestone" },
+    { address: "106 Medway St, Rocklea", rent: "$190/m²", tenant: "Nestle" },
+    { address: "9 Railway Pde, Rocklea", rent: "$200/m²", tenant: "PepsiCo" },
+    { address: "38 Suscatand St, Rocklea", rent: "$170/m²", tenant: "BP" },
+    { address: "5 Shoebury St, Rocklea", rent: "$160/m²", tenant: "EADS" },
+    { address: "35 Shettleston St, Rocklea", rent: "$150/m²", tenant: "China CITIC Bank" },
+    { address: "45 Suscatand St, Rocklea", rent: "$180/m²", tenant: "Energex" },
+    { address: "6 Permarig Pl, Rocklea", rent: "$165/m²", tenant: "Harvey Norman" },
+    { address: "67 Noosa St, Heathwood", rent: "$155/m²", tenant: "Kimberly Clark" },
+    { address: "81 Grindle Rd, Rocklea", rent: "$175/m²", tenant: "Coca Cola" }
   ];
 
   return (
@@ -141,69 +145,76 @@ const About = () => {
                     <CardContent className="p-0">
                       <img 
                         src={article.image} 
-                        alt={article.title}
+                        alt={article.alt}
                         className={`w-full object-cover ${article.id === 1 ? 'h-80 object-contain bg-gray-50' : 'h-64 object-cover'}`}
                       />
-                      <div className="p-6">
-                        <h3 className="text-lg font-semibold text-foreground">{article.title}</h3>
-                      </div>
                     </CardContent>
                   </Card>
                 ))}
               </div>
             </div>
 
-            {/* Recent Sales and Leases */}
+            {/* Recent Sales & Leases Sections */}
             <div className="grid lg:grid-cols-5 gap-16">
               {/* Recent Sales */}
-              <div className="lg:col-span-2">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Recent Sales</h3>
-                <div className="space-y-4">
-                  {(showAllSales ? recentSales : recentSales.slice(0, 10)).map((sale, index) => (
-                    <div key={index} className="border-b border-border pb-3">
-                      <div className="font-medium text-foreground">{sale.address}</div>
-                      <div className="text-sm text-muted-foreground flex justify-between">
-                        <span>{sale.price}</span>
-                        <span>{sale.size}</span>
+              <section className="lg:col-span-2">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-foreground">Recent Sales</h2>
+                </div>
+                <div className="bg-card p-6 rounded-lg shadow-medium border border-border">
+                  <div className="space-y-4">
+                    {(showAllSales ? recentSales : recentSales.slice(0, 10)).map((sale, index) => (
+                      <div key={index} className="flex justify-between items-center py-3 border-b border-border last:border-b-0">
+                        <span className="text-foreground font-medium">{sale.address}</span>
+                        <span className="text-primary font-bold">{sale.price}</span>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                   {recentSales.length > 10 && (
-                    <Button 
-                      variant="outline" 
-                      className="w-full mt-4"
-                      onClick={() => setShowAllSales(!showAllSales)}
-                    >
-                      {showAllSales ? 'Show Less' : 'View More'}
-                    </Button>
+                    <div className="mt-6 text-center">
+                      <Button variant="outline" onClick={() => setShowAllSales(!showAllSales)} className="transition-smooth w-full">
+                        {showAllSales ? <><ChevronUp className="w-4 h-4 mr-2" />Show Less</> : <><ChevronDown className="w-4 h-4 mr-2" />View More ({recentSales.length - 10} more)</>}
+                      </Button>
+                    </div>
                   )}
                 </div>
-              </div>
+              </section>
 
               {/* Recent Leases */}
-              <div className="lg:col-span-3">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Recent Leases</h3>
-                <div className="space-y-4">
-                  {(showAllLeases ? recentLeases : recentLeases.slice(0, 10)).map((lease, index) => (
-                    <div key={index} className="border-b border-border pb-3">
-                      <div className="font-medium text-foreground">{lease.address}</div>
-                      <div className="text-sm text-muted-foreground flex justify-between">
-                        <span>{lease.rent}</span>
-                        <span>{lease.size}</span>
-                      </div>
-                    </div>
-                  ))}
+              <section className="lg:col-span-3">
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-foreground">Recent Leases</h2>
+                </div>
+                <div className="bg-card p-6 rounded-lg shadow-medium border border-border">
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-border">
+                          <th className="text-left py-3 px-2 text-foreground font-semibold">Address</th>
+                          <th className="text-center py-3 px-2 text-foreground font-semibold">Rent</th>
+                          <th className="text-right py-3 px-2 text-foreground font-semibold">Tenant</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(showAllLeases ? recentLeases : recentLeases.slice(0, 10)).map((lease, index) => (
+                          <tr key={index} className="border-b border-border last:border-b-0">
+                            <td className="py-3 px-2 text-foreground font-medium">{lease.address}</td>
+                            <td className="py-3 px-2 text-center text-primary font-bold">{lease.rent}</td>
+                            <td className="py-3 px-2 text-right text-muted-foreground">{lease.tenant}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                   {recentLeases.length > 10 && (
-                    <Button 
-                      variant="outline" 
-                      className="w-full mt-4"
-                      onClick={() => setShowAllLeases(!showAllLeases)}
-                    >
-                      {showAllLeases ? 'Show Less' : 'View More'}
-                    </Button>
+                    <div className="mt-6 text-center">
+                      <Button variant="outline" onClick={() => setShowAllLeases(!showAllLeases)} className="transition-smooth w-full">
+                        {showAllLeases ? <><ChevronUp className="w-4 h-4 mr-2" />Show Less</> : <><ChevronDown className="w-4 h-4 mr-2" />View More ({recentLeases.length - 10} more)</>}
+                      </Button>
+                    </div>
                   )}
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>
