@@ -11,12 +11,12 @@ const ClientLogos = () => {
     { name: "Harvey Norman", logo: `${basePath}HarveryNorman-logo-stacked.png`, size: "h-10 md:h-16" },
     { name: "OTIS", logo: `${basePath}2560px-Otis_logo.SVG.png`, size: "h-8 md:h-14" },
     { name: "China CITIC Bank", logo: `${basePath}601998.SS_BIG-0099d861.png`, size: "h-10 md:h-16" },
-    { name: "EADS", logo: `${basePath}eads-seeklogo.png`, size: "h-10 md:h-16" },
+    { name: "EADS", logo: `${basePath}eads-seeklogo.png`, size: "h-14 md:h-24" },
     { name: "Energex", logo: `${basePath}Energex_logo.png`, size: "h-10 md:h-16" }
   ];
 
-  // Duplicate the clients array for seamless looping
-  const allClients = [...clients, ...clients];
+  // Create multiple cycles for seamless infinite loop
+  const allClients = [...clients, ...clients, ...clients, ...clients, ...clients];
 
   return (
     <section className="py-16 bg-background">
