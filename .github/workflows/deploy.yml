@@ -66,6 +66,13 @@ jobs:
       run: |
         sed -i 's|href="/IPlogofavicon|href="/industrial-partners-brisbane/IPlogofavicon|g' dist/index.html
       
+    - name: Fix asset paths for GitHub Pages
+      run: |
+        find dist -type f -name "*.html" -exec sed -i 's|src="/|src="/industrial-partners-brisbane/|g' {} +
+        find dist -type f -name "*.html" -exec sed -i 's|href="/|href="/industrial-partners-brisbane/|g' {} +
+        find dist -type f -name "*.css" -exec sed -i 's|url(/|url(/industrial-partners-brisbane/|g' {} +
+        find dist -type f -name "*.js" -exec sed -i 's|"/"|\"/industrial-partners-brisbane/\"|g' {} +
+      
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
