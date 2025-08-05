@@ -31,7 +31,7 @@ const Hero = () => {
         ) : (
           <img src={`${basePath}lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png`} alt="Modern industrial warehouse" className="w-full h-full object-cover" />
         )}
-        <div className="absolute inset-0 overlay-gradient"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
       {/* Content */}
