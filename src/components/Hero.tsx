@@ -45,7 +45,7 @@ const Hero = () => {
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Industrial Real Estate
-              <span className="block text-white">Excellence</span>
+              <span className="block text-white/90">Excellence</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
