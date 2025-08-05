@@ -97,7 +97,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative z-10">
+    <section id="contact" className="py-20 relative z-10 pt-safe">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
