@@ -27,8 +27,12 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="font-bold text-2xl text-foreground hover:opacity-80 transition-fast">
-            Industrial<span className="text-muted-foreground">Partners</span>
+          <a href="/" className="hover:opacity-80 transition-fast">
+            <img 
+              src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" 
+              alt="Industrial Partners Property Consultants" 
+              className="h-8 md:h-10 w-auto"
+            />
           </a>
 
           {/* Desktop Navigation */}
