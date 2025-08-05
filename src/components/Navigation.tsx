@@ -18,7 +18,6 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Our Principle", href: "/our-principle" },
     { name: "Contact", href: "/contact" },
@@ -35,7 +34,7 @@ const Navigation = () => {
             <img
               src={`${basePath}WhiteIndustryPartnersLogo (2).png`}
               alt="Industrial Partners Logo"
-              className="h-20 md:h-36 w-auto object-contain"
+              className="h-16 md:h-28 w-auto object-contain"
             />
           </Link>
 
@@ -54,7 +53,7 @@ const Navigation = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="text-white border-white hover:bg-white hover:text-black transition-colors"
+                className="text-white border-white bg-transparent hover:bg-white hover:text-black transition-colors"
                 onClick={() => window.open('tel:+61414727052', '_self')}
               >
                 <Phone className="w-4 h-4 mr-2" />
