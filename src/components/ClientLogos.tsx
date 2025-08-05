@@ -1,16 +1,18 @@
+import { basePath } from '@/utils/path';
+
 const ClientLogos = () => {
   const clients = [
-    { name: "Kimberly-Clark", logo: "/Kimberly-Clark_Logo.png", size: "h-10" },
-    { name: "Nestlé", logo: "/nestle-9-logo-png-transparent.png", size: "h-20" },
-    { name: "PepsiCo", logo: "/PepsiCo_logo.svg", size: "h-16" },
-    { name: "BP", logo: "/bp-logo-png-transparent.webp", size: "h-20" },
-    { name: "Bridgestone", logo: "/Bridgestone-Logo-e1607987001589.webp", size: "h-16" },
-    { name: "Coca-Cola", logo: "/Coca-Cola-logo.png", size: "h-16" },
-    { name: "Harvey Norman", logo: "/HarveryNorman-logo-stacked.png", size: "h-16" },
-    { name: "OTIS", logo: "/2560px-Otis_logo.SVG.png", size: "h-14" },
-    { name: "China CITIC Bank", logo: "/601998.SS_BIG-0099d861.png", size: "h-16" },
-    { name: "EADS", logo: "/EADS_logo.svg.png", size: "h-16" },
-    { name: "Energex", logo: "/Energex_logo.png", size: "h-16" }
+    { name: "Kimberly-Clark", logo: `${basePath}Kimberly-Clark_Logo.png`, size: "h-10" },
+    { name: "Nestlé", logo: `${basePath}nestle-9-logo-png-transparent.png`, size: "h-20" },
+    { name: "PepsiCo", logo: `${basePath}PepsiCo_logo.svg`, size: "h-16" },
+    { name: "BP", logo: `${basePath}bp-logo-png-transparent.webp`, size: "h-20" },
+    { name: "Bridgestone", logo: `${basePath}Bridgestone-Logo-e1607987001589.webp`, size: "h-16" },
+    { name: "Coca-Cola", logo: `${basePath}Coca-Cola-logo.png`, size: "h-16" },
+    { name: "Harvey Norman", logo: `${basePath}HarveryNorman-logo-stacked.png`, size: "h-16" },
+    { name: "OTIS", logo: `${basePath}2560px-Otis_logo.SVG.png`, size: "h-14" },
+    { name: "China CITIC Bank", logo: `${basePath}601998.SS_BIG-0099d861.png`, size: "h-16" },
+    { name: "EADS", logo: `${basePath}EADS_logo.svg.png`, size: "h-16" },
+    { name: "Energex", logo: `${basePath}Energex_logo.png`, size: "h-16" }
   ];
 
   // Create a seamless loop by duplicating the array

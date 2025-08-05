@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Phone, Mail, MapPin, Linkedin } from 'lucide-react';
+import { basePath } from '@/utils/path';
 
 const JohnLegg = () => {
   return (
@@ -13,8 +14,8 @@ const JohnLegg = () => {
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-            <source src="/IPvideogreyscale.mp4" type="video/mp4" />
-            <img src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" alt="Modern industrial warehouse" className="w-full h-full object-cover" />
+            <source src={`${basePath}IPvideogreyscale.mp4`} type="video/mp4" />
+            <img src={`${basePath}lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png`} alt="Modern industrial warehouse" className="w-full h-full object-cover" />
           </video>
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -30,7 +31,7 @@ const JohnLegg = () => {
                       {/* Small Image Section */}
                       <div className="flex-shrink-0">
                         <img 
-                          src="/lovable-uploads/2f527cab-acf8-4d29-8c28-64f3c64d035e.png" 
+                          src={`${basePath}lovable-uploads/2f527cab-acf8-4d29-8c28-64f3c64d035e.png`} 
                           alt="John Legg Industrial Partners Principal"
                           className="w-32 h-32 lg:w-40 lg:h-40 object-cover object-center rounded-lg shadow-medium"
                         />

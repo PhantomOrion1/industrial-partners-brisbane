@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { basePath } from '@/utils/path';
 
 const About = () => {
   const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
@@ -13,17 +14,17 @@ const About = () => {
   const newsArticles = [
     {
       id: 1,
-      image: "/lovable-uploads/bf000c07-91ab-432a-8dd3-af325fceac16.png",
+      image: `${basePath}lovable-uploads/bf000c07-91ab-432a-8dd3-af325fceac16.png`,
       alt: "News article about trucks moving in on real bargain deal",
     },
     {
       id: 2,
-      image: "/lovable-uploads/75350691-2885-417d-bd15-89d568415c8e.png",
+      image: `${basePath}lovable-uploads/75350691-2885-417d-bd15-89d568415c8e.png`,
       alt: "News article about export firm's expansion plans",
     },
     {
       id: 3,
-      image: "/lovable-uploads/760bdee3-24bf-4cad-a585-1093dd29fc70.png",
+      image: `${basePath}lovable-uploads/760bdee3-24bf-4cad-a585-1093dd29fc70.png`,
       alt: "News article about fencing supplier consolidation",
     }
   ];
@@ -81,8 +82,8 @@ const About = () => {
         <section className="relative h-[60vh] flex items-center justify-center text-white">
           <div className="absolute inset-0 z-0">
             <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-              <source src="/IPvideogreyscale.mp4" type="video/mp4" />
-              <img src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" alt="Modern industrial warehouse" className="w-full h-full object-cover" />
+              <source src={`${basePath}IPvideogreyscale.mp4`} type="video/mp4" />
+              <img src={`${basePath}lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png`} alt="Modern industrial warehouse" className="w-full h-full object-cover" />
             </video>
             <div className="absolute inset-0 bg-black/60"></div>
           </div>

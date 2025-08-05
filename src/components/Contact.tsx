@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { basePath } from '@/utils/path';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -100,8 +101,8 @@ const Contact = () => {
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-          <source src="/IPvideogreyscale.mp4" type="video/mp4" />
-          <img src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" alt="Modern industrial warehouse" className="w-full h-full object-cover" />
+          <source src={`${basePath}IPvideogreyscale.mp4`} type="video/mp4" />
+          <img src={`${basePath}lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png`} alt="Modern industrial warehouse" className="w-full h-full object-cover" />
         </video>
         <div className="absolute inset-0 bg-black/60"></div>
       </div>

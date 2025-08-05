@@ -2,12 +2,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Square } from 'lucide-react';
+import { basePath } from '@/utils/path';
 
 const Properties = () => {
   const featuredProperties = [
     {
       id: 1,
-      image: "/IPimage1.jpg",
+      image: `${basePath}IPimage1.jpg`,
       title: "Darra Industrial Property",
       location: "Darra, QLD 4076",
       size: "538 m²",
@@ -19,7 +20,7 @@ const Properties = () => {
     },
     {
       id: 2,
-      image: "/IPimage3.jpg",
+      image: `${basePath}IPimage3.jpg`,
       title: "Franklin Street Industrial",
       location: "27 Franklin Street, Rocklea QLD 4106",
       size: "3,000 m²",
@@ -31,7 +32,7 @@ const Properties = () => {
     },
     {
       id: 3,
-      image: "/IPimage4.jpg",
+      image: `${basePath}IPimage4.jpg`,
       title: "Ipswich Road Industrial",
       location: "B1 1699 Ipswich Rd, Rocklea QLD 4106",
       size: "1,926 m² + 2,300 m² hardstand",

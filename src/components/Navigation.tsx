@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { basePath } from '@/utils/path';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +31,7 @@ const Navigation = () => {
           {/* Logo */}
           <a href="/" className="hover:opacity-80 transition-fast">
             <img 
-              src="/WhiteIndustryPartnersLogo (2).png" 
+              src={`${basePath}WhiteIndustryPartnersLogo (2).png`} 
               alt="Industrial Partners Property Consultants" 
               className="h-24 md:h-30 w-auto"
             />

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, MapPin } from 'lucide-react';
 import { Link } from "react-router-dom";
+import { basePath } from '@/utils/path';
 
 const Hero = () => {
   return (
@@ -14,10 +15,10 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/IPvideocolour.mp4" type="video/mp4" />
+          <source src={`${basePath}IPvideocolour.mp4`} type="video/mp4" />
           {/* Fallback image */}
           <img 
-            src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" 
+            src={`${basePath}lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png`} 
             alt="Modern industrial warehouse"
             className="w-full h-full object-cover"
           />
