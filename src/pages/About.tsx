@@ -77,7 +77,7 @@ const About = () => {
         <section className="relative h-[60vh] flex items-center justify-center text-white">
           <div className="absolute inset-0 z-0">
             <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-              <source src={`${basePath}IPvideogreyscale.mp4`} type="video/mp4" />
+              <source src={`${basePath}AboutSectionVid.mp4`} type="video/mp4" />
               <img src={`${basePath}lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png`} alt="Industrial warehouse" className="w-full h-full object-cover" />
             </video>
             <div className="absolute inset-0 bg-black/60"></div>
