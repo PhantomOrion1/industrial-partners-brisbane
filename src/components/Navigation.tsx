@@ -29,7 +29,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="hover:opacity-80 transition-fast">
+          <a href="https://phantomorion1.github.io/industrial-partners-brisbane" className="hover:opacity-80 transition-fast">
             <img 
               src={`${basePath}WhiteIndustryPartnersLogo (2).png`} 
               alt="Industrial Partners Property Consultants" 
