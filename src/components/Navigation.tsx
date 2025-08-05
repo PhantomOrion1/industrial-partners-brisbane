@@ -35,7 +35,7 @@ const Navigation = () => {
             <img
               src={`${basePath}WhiteIndustryPartnersLogo (2).png`}
               alt="Industrial Partners Logo"
-              className="h-28 md:h-52 w-auto object-contain"
+              className="h-20 md:h-36 w-auto object-contain"
             />
           </Link>
 
