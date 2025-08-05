@@ -5,7 +5,7 @@ import { basePath } from '@/utils/path';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-safe pt-32 md:pt-safe">
+    <section id="home" className="relative min-h-screen flex items-center pt-safe pt-40 md:pt-safe">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video 

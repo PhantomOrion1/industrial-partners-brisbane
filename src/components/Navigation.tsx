@@ -81,12 +81,6 @@ const Navigation = () => {
                       {item.name}
                     </Link>
                   ))}
-                  <div className="border-t border-gray-200 mt-2 pt-2">
-                    <Button variant="outline" size="sm" className="w-full mx-2 transition-smooth">
-                      <Phone className="w-4 h-4 mr-2" />
-                      +61 414 727 052
-                    </Button>
-                  </div>
                 </div>
               </div>
             )}

@@ -10,7 +10,7 @@ const JohnLegg = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-24 pt-safe">
+      <main className="pt-32 pt-safe">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover">
