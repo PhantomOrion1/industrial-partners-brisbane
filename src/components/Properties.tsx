@@ -1,44 +1,45 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Square, DollarSign, Calendar } from 'lucide-react';
-import warehouseInterior from "@/assets/warehouse-interior.jpg";
-import industrialComplex from "@/assets/industrial-complex.jpg";
+import { MapPin, Square } from 'lucide-react';
 
 const Properties = () => {
   const featuredProperties = [
     {
       id: 1,
-      image: warehouseInterior,
-      title: "Modern Distribution Centre",
-      location: "Port of Brisbane",
-      size: "15,000 sqm",
-      type: "For Sale",
-      price: "$12.5M",
-      description: "State-of-the-art distribution facility with premium infrastructure and excellent transport links.",
-      features: ["12m Clear Height", "40 Dock Doors", "Sprinkler System", "3-Phase Power"]
+      image: "/IPimage1.jpg",
+      title: "Darra Industrial Property",
+      location: "Darra, QLD 4076",
+      size: "538 m²",
+      type: "Recently Leased",
+      price: "Leased",
+      description: "Premium industrial facility featuring a quality building with modern office space, extensive parking, and secure container yard. Located in a flood-free zone with excellent access.",
+      features: ["Quality Building", "Modern Office Space", "Extensive Parking", "Container Yard", "Flood-Free Location", "2 Roller Doors"],
+      link: "https://www.realcommercial.com.au/leased/property-darra-qld-4076-504756520"
     },
     {
       id: 2,
-      image: industrialComplex,
-      title: "Industrial Complex",
-      location: "Acacia Ridge",
-      size: "8,500 sqm",
-      type: "For Lease",
-      price: "$85/sqm p.a.",
-      description: "Multi-tenanted industrial complex ideal for manufacturing and logistics operations.",
-      features: ["Container Access", "Secure Parking", "Office Space", "Flexible Terms"]
+      image: "/IPimage3.jpg",
+      title: "Franklin Street Industrial",
+      location: "27 Franklin Street, Rocklea QLD 4106",
+      size: "3,000 m²",
+      type: "Recently Leased",
+      price: "Leased",
+      description: "Spacious industrial facility with yard and shed configuration, offering excellent value for money. Available February 2025 with container space and ready-to-occupy setup.",
+      features: ["Yard and Shed Configuration", "Container Space", "Value for Money", "Ready to Occupy", "Strategic Location"],
+      link: "https://www.realcommercial.com.au/leased/property-27-franklin-street-rocklea-qld-4106-504613280"
     },
     {
       id: 3,
-      image: warehouseInterior,
-      title: "Logistics Hub",
-      location: "Yatala",
-      size: "22,000 sqm",
-      type: "For Sale",
-      price: "$18.9M",
-      description: "Premium logistics facility strategically positioned for distribution networks.",
-      features: ["Cross-Dock Design", "Rail Access", "Automated Systems", "Grade A Fitout"]
+      image: "/IPimage4.jpg",
+      title: "Ipswich Road Industrial",
+      location: "B1 1699 Ipswich Rd, Rocklea QLD 4106",
+      size: "1,926 m² + 2,300 m² hardstand",
+      type: "Recently Leased",
+      price: "Leased",
+      description: "Premium industrial facility with main road exposure featuring a modern office/warehouse complex and extensive hardstand area. 24/7 operations with secure access.",
+      features: ["Main Road Exposure", "24/7 Operations", "Multiple Roller Doors", "Secure Facility", "Modern Office/Warehouse", "Extensive Hardstand"],
+      link: "https://www.realcommercial.com.au/leased/property-b1-1699-ipswich-rd-rocklea-qld-4106-504699324"
     }
   ];
 
@@ -46,11 +47,11 @@ const Properties = () => {
     <section id="properties" className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Featured Properties
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Recently Leased Properties
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover premium warehouse and industrial properties in Brisbane's most strategic locations.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Discover our latest successful leasing transactions in Brisbane's most strategic industrial locations.
           </p>
         </div>
 
@@ -63,14 +64,6 @@ const Properties = () => {
                   alt={property.title}
                   className="w-full h-full object-cover transition-smooth hover:scale-105"
                 />
-                <div className="absolute top-4 left-4">
-                  <Badge 
-                    variant={property.type.includes('Sale') ? 'default' : 'secondary'}
-                    className="font-semibold"
-                  >
-                    {property.type}
-                  </Badge>
-                </div>
                 <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm rounded-lg px-3 py-1">
                   <span className="font-bold text-foreground">{property.price}</span>
                 </div>
@@ -101,21 +94,19 @@ const Properties = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-2">
-                  <Button className="flex-1 transition-smooth">
-                    View Details
-                  </Button>
-                  <Button variant="outline" size="icon" className="transition-smooth">
-                    <Calendar className="w-4 h-4" />
-                  </Button>
-                </div>
+                <Button 
+                  className="w-full transition-smooth"
+                  onClick={() => window.open(property.link, '_blank')}
+                >
+                  View Details
+                </Button>
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="transition-smooth">
+          <Button size="lg" variant="outline" className="transition-smooth" onClick={() => window.open('https://www.realcommercial.com.au/agency/industrial-partners-MDWHPW', '_blank')}>
             View All Properties
           </Button>
         </div>

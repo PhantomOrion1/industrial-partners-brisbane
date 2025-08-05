@@ -6,7 +6,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-20">
+      <main>
         <Contact />
       </main>
       <Footer />

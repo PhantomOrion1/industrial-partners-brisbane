@@ -1,20 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, MapPin } from 'lucide-react';
-import heroWarehouse from "@/assets/hero-warehouse.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroWarehouse} 
-          alt="Modern industrial warehouse"
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/IPvideocolour.mp4" type="video/mp4" />
+          {/* Fallback image */}
+          <img 
+            src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" 
+            alt="Modern industrial warehouse"
+            className="w-full h-full object-cover"
+          />
+        </video>
         <div className="absolute inset-0 overlay-gradient"></div>
       </div>
-
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
         <div className="max-w-4xl">
@@ -35,33 +44,31 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-smooth">
+              <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-smooth" onClick={() => window.open('https://www.realcommercial.com.au/agency/industrial-partners-MDWHPW', '_blank')}>
                 <Building2 className="w-5 h-5 mr-2" />
                 View Properties
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-smooth"
-              >
-                Contact Us Today
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-smooth">
+                  Contact Us Today
+                </Button>
+              </Link>
             </div>
 
             {/* Key Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               <div className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-primary-foreground mb-2">500+</div>
+                <div className="text-3xl font-bold text-primary-foreground mb-2">200+</div>
                 <div className="text-primary-foreground/80">Properties Sold</div>
               </div>
               <div className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-primary-foreground mb-2">25+</div>
+                <div className="text-3xl font-bold text-primary-foreground mb-2">40+</div>
                 <div className="text-primary-foreground/80">Years Experience</div>
               </div>
               <div className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-primary-foreground mb-2">100M+</div>
-                <div className="text-primary-foreground/80">Square Meters</div>
+                <div className="text-3xl font-bold text-primary-foreground mb-2">1M+</div>
+                <div className="text-primary-foreground/80">Square Metres</div>
               </div>
             </div>
           </div>

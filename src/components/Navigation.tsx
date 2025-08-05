@@ -15,45 +15,45 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '/about' },
     { name: 'Our Principle', href: '/john-legg' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-      isScrolled ? 'bg-card/95 backdrop-blur-sm shadow-medium' : 'bg-transparent'
+      isScrolled ? 'opacity-0 pointer-events-none' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="hover:opacity-80 transition-fast">
             <img 
-              src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" 
+              src="/WhiteIndustryPartnersLogo (2).png" 
               alt="Industrial Partners Property Consultants" 
-              className="h-40 md:h-48 w-auto"
+              className="h-24 md:h-30 w-auto"
             />
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Moved to right side */}
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-muted-foreground transition-fast font-medium"
+                className="text-white hover:text-white/80 transition-fast font-medium"
               >
                 {item.name}
               </a>
             ))}
-          </div>
-
-          {/* Contact Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="transition-smooth">
-              <Phone className="w-4 h-4 mr-2" />
-              +61 414 727 052
-            </Button>
+            
+            {/* Contact Button */}
+            <div className="ml-4">
+              <Button variant="outline" size="sm" className="transition-smooth">
+                <Phone className="w-4 h-4 mr-2" />
+                +61 414 727 052
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -73,7 +73,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-muted-foreground transition-fast font-medium"
+                  className="text-white hover:text-white/80 transition-fast font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
