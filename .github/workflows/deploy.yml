@@ -61,6 +61,10 @@ jobs:
           </body>
         </html>
         EOF
+        
+    - name: Fix favicon path for GitHub Pages
+      run: |
+        sed -i 's|href="/IPlogofavicon|href="/industrial-partners-brisbane/IPlogofavicon|g' dist/index.html
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
