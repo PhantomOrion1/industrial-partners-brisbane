@@ -29,11 +29,6 @@ jobs:
     - name: Build
       run: npm run build
       
-    - name: Move dist files to root
-      run: |
-        cp -r dist/* .
-        rm -rf dist
-      
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
