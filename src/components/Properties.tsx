@@ -57,12 +57,12 @@ const Properties = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {featuredProperties.map((property, index) => (
-            <Card key={property.id} className={`overflow-hidden shadow-medium transition-smooth hover:shadow-strong hover:-translate-y-1 fade-in`} style={{animationDelay: `${index * 0.2}s`}}>
+            <Card key={property.id} className={`overflow-hidden shadow-medium transition-smooth hover:shadow-strong hover:-translate-y-1 fade-in-delay-${index + 1}`}>
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={property.image} 
                   alt={property.title}
-                  className="w-full h-full object-cover transition-smooth hover:scale-105"
+                  className={`w-full h-full object-cover object-center ${index === 1 ? 'scale-125' : 'scale-110'}`}
                 />
                 <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm rounded-lg px-3 py-1">
                   <span className="font-bold text-foreground">{property.price}</span>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'About', href: '/about' },
-    { name: 'Our Principle', href: '/john-legg' },
+    { name: 'Our Principle', href: '/our-principle' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -38,13 +39,13 @@ const Navigation = () => {
           {/* Desktop Navigation - Moved to right side */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
+              <Link 
                 key={item.name}
-                href={item.href}
-                className="text-white hover:text-white/80 transition-fast font-medium"
+                to={item.href}
+                className="text-white hover:text-white/80 transition-colors"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             
             {/* Contact Button */}
@@ -70,14 +71,14 @@ const Navigation = () => {
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className="text-white hover:text-white/80 transition-fast font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Button variant="outline" size="sm" className="self-start transition-smooth">
                 <Phone className="w-4 h-4 mr-2" />

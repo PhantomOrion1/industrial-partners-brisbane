@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/industrial-partners-brisbane/',
+  // base: '/industrial-partners-brisbane/', // Commented out for local preview
   server: {
     host: "::",
     port: 8080,

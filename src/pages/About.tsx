@@ -90,7 +90,7 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-4 fade-in">
               About Industrial Partners
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto fade-in-delay">
               Brisbane's premier industrial real estate specialists with over 40 years of experience in warehouse sales and leasing.
             </p>
           </div>
@@ -110,7 +110,7 @@ const About = () => {
                   <p>Our deep knowledge of Brisbane's industrial landscape, combined with our commitment to personalised service, has made us the trusted choice for industrial property transactions across the region.</p>
                 </div>
               </div>
-              <div className="lg:col-span-1 grid grid-cols-1 gap-6 fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="lg:col-span-1 grid grid-cols-1 gap-6 fade-in-delay">
                 <div className="bg-card p-4 rounded-lg shadow-medium border border-border text-center">
                   <h3 className="text-2xl font-bold text-primary mb-1">200+</h3>
                   <p className="text-sm text-muted-foreground font-medium">Properties Transacted</p>
