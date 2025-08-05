@@ -11,11 +11,11 @@ const ClientLogos = () => {
     { name: "Harvey Norman", logo: `${basePath}HarveryNorman-logo-stacked.png`, size: "h-10 md:h-16" },
     { name: "OTIS", logo: `${basePath}2560px-Otis_logo.SVG.png`, size: "h-8 md:h-14" },
     { name: "China CITIC Bank", logo: `${basePath}601998.SS_BIG-0099d861.png`, size: "h-10 md:h-16" },
-    { name: "EADS", logo: `${basePath}EADS_logo.svg.png`, size: "h-10 md:h-16" },
+    { name: "EADS", logo: `${basePath}eads-seeklogo.png`, size: "h-10 md:h-16" },
     { name: "Energex", logo: `${basePath}Energex_logo.png`, size: "h-10 md:h-16" }
   ];
 
-  // Create a seamless loop by duplicating the array
+  // Duplicate the clients array for seamless looping
   const allClients = [...clients, ...clients];
 
   return (
@@ -27,12 +27,12 @@ const ClientLogos = () => {
           </h2>
         </div>
         
-        <div className="w-full overflow-hidden">
+        <div className="relative overflow-hidden">
           <ul className="flex items-center [&_li]:mx-8 md:[&_li]:mx-12 [&_img]:max-w-none animate-infinite-scroll-mobile md:animate-infinite-scroll">
             {allClients.map((client, index) => (
-              <li key={index} className="flex-shrink-0">
-                <img 
-                  src={client.logo} 
+              <li key={`${client.name}-${index}`} className="flex-shrink-0">
+                <img
+                  src={client.logo}
                   alt={`${client.name} logo`}
                   className={`${client.size} w-auto object-contain transition-all duration-300 opacity-90 hover:opacity-100`}
                 />
