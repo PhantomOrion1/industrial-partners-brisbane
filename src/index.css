@@ -146,6 +146,15 @@ body {
   }
 }
 
+@keyframes infinite-scroll-mobile {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* Animation Classes */
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
@@ -181,6 +190,10 @@ body {
 
 .animate-infinite-scroll {
   animation: infinite-scroll 80s linear infinite;
+}
+
+.animate-infinite-scroll-mobile {
+  animation: infinite-scroll-mobile 40s linear infinite;
 }
 
 /* Overlay Gradient */

@@ -33,7 +33,7 @@ const Navigation = () => {
             <img 
               src={`${basePath}WhiteIndustryPartnersLogo (2).png`} 
               alt="Industrial Partners Property Consultants" 
-              className="h-20 md:h-30 w-auto"
+              className="h-16 md:h-30 w-auto"
             />
           </a>
 
