@@ -26,6 +26,42 @@ jobs:
     - name: Build
       run: npm run build
       
+    - name: Create 404.html for SPA routing
+      run: |
+        cat > dist/404.html << 'EOF'
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Industrial Partners - Brisbane Warehouse Solutions</title>
+            <meta name="description" content="Professional industrial real estate services in Brisbane. Selling and leasing warehouses and industrial properties." />
+            <meta name="author" content="Industrial Partners" />
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+            <!-- Favicon -->
+            <link rel="icon" type="image/png" href="/industrial-partners-brisbane/IPlogofavicon (1).png" />
+
+            <meta property="og:title" content="4a08b092-e433-48c7-adac-7f88f8e1d9c5" />
+            <meta property="og:description" content="Lovable Generated Project" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+            <script>
+              // GitHub Pages SPA 404 redirect handling
+              sessionStorage.redirect = location.href;
+            </script>
+            
+            <meta http-equiv="refresh" content="0;URL='/industrial-partners-brisbane/'" />
+          </head>
+          <body>
+            <div id="root"></div>
+          </body>
+        </html>
+        EOF
+      
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
