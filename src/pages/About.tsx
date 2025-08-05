@@ -68,7 +68,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 pt-safe">
+      <main className="pt-safe">
         {/* Hero Section with Video Background */}
         <section className="relative h-[60vh] flex items-center justify-center text-white">
           <div className="absolute inset-0 z-0">
