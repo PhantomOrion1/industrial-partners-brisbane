@@ -28,7 +28,7 @@ const Navigation = () => {
       isScrolled ? 'opacity-0 pointer-events-none' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img
@@ -38,8 +38,11 @@ const Navigation = () => {
             />
           </Link>
 
+          {/* Spacer */}
+          <div className="flex-1"></div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -49,17 +52,15 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="ml-4">
-              <Button
-                variant="outline"
-                size="sm"
-                className="text-white border-white bg-transparent hover:bg-white hover:text-black transition-colors"
-                onClick={() => window.open('tel:+61414727052', '_self')}
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                +61 414 727 052
-              </Button>
-            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-white border-white bg-transparent hover:bg-white hover:text-black transition-colors ml-6"
+              onClick={() => window.open('tel:+61414727052', '_self')}
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              +61 414 727 052
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
