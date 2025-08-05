@@ -10,8 +10,8 @@ const JohnLegg = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <main className="pt-24 pt-safe">
-        {/* Background Video */}
+      <main className="pt-16 pt-safe relative">
+        {/* Background Video - Only covers main content */}
         <div className="absolute inset-0 z-0">
           <video autoPlay muted loop playsInline className="w-full h-full object-cover">
             <source src={`${basePath}IPvideogreyscale.mp4`} type="video/mp4" />
@@ -21,7 +21,7 @@ const JohnLegg = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="py-12 relative z-10">
+        <section className="py-8 relative z-10">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-medium">
