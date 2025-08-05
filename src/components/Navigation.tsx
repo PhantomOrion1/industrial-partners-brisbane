@@ -15,10 +15,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
+    { name: 'Home', href: '/' },
     { name: 'Properties', href: '#properties' },
     { name: 'About', href: '#about' },
+    { name: 'John Legg', href: '/john-legg' },
     { name: 'Contact', href: '#contact' },
   ];
 
