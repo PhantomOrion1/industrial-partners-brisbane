@@ -146,7 +146,7 @@ const About = () => {
                       <img 
                         src={article.image} 
                         alt={article.alt}
-                        className={`w-full object-cover ${article.id === 1 ? 'h-80 object-contain bg-gray-50' : 'h-64 object-cover'}`}
+                        className="w-full h-64 object-cover"
                       />
                     </CardContent>
                   </Card>

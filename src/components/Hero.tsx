@@ -39,21 +39,21 @@ const Hero = () => {
         <div className="max-w-4xl">
           <div className="fade-in">
             <div className="flex items-center space-x-2 mb-6">
-              <MapPin className="w-5 h-5 text-primary-foreground" />
-              <span className="text-primary-foreground/80 font-medium">Brisbane, Australia</span>
+              <MapPin className="w-5 h-5 text-white" />
+              <span className="text-white font-medium">Brisbane, Australia</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Industrial Real Estate
-              <span className="block text-primary-foreground">Excellence</span>
+              <span className="block text-white">Excellence</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary-foreground mb-8 max-w-2xl leading-relaxed">
+            <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl leading-relaxed">
               Brisbane's premier destination for warehouse sales and leasing. 
               Professional service, prime locations, exceptional results.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 transition-smooth" onClick={() => window.open('https://www.realcommercial.com.au/agency/industrial-partners-MDWHPW', '_blank')}>
                 <Building2 className="w-5 h-5 mr-2" />
                 View Properties
@@ -67,18 +67,18 @@ const Hero = () => {
             </div>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
               <div className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-primary-foreground mb-2">200+</div>
-                <div className="text-primary-foreground/80">Properties Sold</div>
+                <div className="text-3xl font-bold text-white mb-2">200+</div>
+                <div className="text-white">Properties Sold</div>
               </div>
               <div className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-primary-foreground mb-2">30+</div>
-                <div className="text-primary-foreground/80">Years Experience</div>
+                <div className="text-3xl font-bold text-white mb-2">30+</div>
+                <div className="text-white">Years Experience</div>
               </div>
               <div className="text-center sm:text-left">
-                <div className="text-3xl font-bold text-primary-foreground mb-2">1M+</div>
-                <div className="text-primary-foreground/80">Square Metres</div>
+                <div className="text-3xl font-bold text-white mb-2">1M+</div>
+                <div className="text-white">Square Metres</div>
               </div>
             </div>
           </div>
@@ -86,9 +86,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary-foreground/60 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/60 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary-foreground/60 rounded-full mt-2"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
         </div>
       </div>
     </section>
