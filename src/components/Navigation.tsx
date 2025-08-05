@@ -31,7 +31,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/6fd82ffa-4b90-4b33-a02f-78fc01f5d5e9.png" 
               alt="Industrial Partners Property Consultants" 
-              className="h-8 md:h-10 w-auto"
+              className="h-40 md:h-48 w-auto"
             />
           </a>
 
