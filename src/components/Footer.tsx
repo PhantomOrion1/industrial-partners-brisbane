@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-primary-foreground">About</h3>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Over 40 years of experience in Brisbane's industrial property market. 
+              Over 30 years of experience in Brisbane's industrial property market. 
               Specialising in warehouse sales and leasing with personalised service.
             </p>
           </div>
