@@ -58,45 +58,53 @@ const Properties = () => {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           {featuredProperties.map((property, index) => (
-            <Card key={property.id} className={`overflow-hidden shadow-medium transition-smooth hover:shadow-strong hover:-translate-y-1 fade-in-delay-${index + 1}`}>
+            <Card 
+              key={property.id} 
+              className={`overflow-hidden shadow-medium transition-all duration-500 hover:shadow-xl hover:shadow-primary/20 hover:scale-105 hover:-translate-y-2 cursor-pointer group fade-in-delay-${index + 1}`}
+            >
               <div className="relative h-64 overflow-hidden">
                 <img 
                   src={property.image} 
                   alt={property.title}
-                  className={`w-full h-full object-cover object-center ${index === 1 ? 'scale-125' : 'scale-110'}`}
+                  className={`w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110 ${index === 1 ? 'scale-125' : 'scale-110'}`}
                 />
-                <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                  <span className="font-bold text-foreground">{property.price}</span>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500"></div>
+                <div className="absolute top-4 right-4 bg-card/90 backdrop-blur-sm rounded-lg px-3 py-1 transform transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110">
+                  <span className="font-bold">{property.price}</span>
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-2">
+              <CardContent className="p-6 transform transition-all duration-300 group-hover:translate-y-0">
+                <h3 className="text-xl font-bold text-foreground mb-2 transition-colors duration-300 group-hover:text-primary">
                   {property.title}
                 </h3>
                 
-                <div className="flex items-center text-muted-foreground mb-4">
+                <div className="flex items-center text-muted-foreground mb-4 transition-colors duration-300 group-hover:text-foreground">
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>{property.location}</span>
                   <Square className="w-4 h-4 ml-4 mr-2" />
                   <span>{property.size}</span>
                 </div>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed transition-colors duration-300 group-hover:text-foreground">
                   {property.description}
                 </p>
 
                 <div className="space-y-2 mb-6">
-                  {property.features.map((feature) => (
-                    <div key={feature} className="flex items-center text-sm text-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                  {property.features.map((feature, featureIndex) => (
+                    <div 
+                      key={feature} 
+                      className="flex items-center text-sm text-foreground transition-all duration-300"
+                      style={{ transitionDelay: `${featureIndex * 50}ms` }}
+                    >
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 transition-all duration-300 group-hover:bg-primary group-hover:scale-150"></div>
                       {feature}
                     </div>
                   ))}
                 </div>
 
                 <Button 
-                  className="w-full transition-smooth"
+                  className="w-full transition-all duration-300 transform group-hover:bg-primary group-hover:scale-105 group-hover:shadow-lg"
                   onClick={() => window.open(property.link, '_blank')}
                 >
                   View Details
@@ -107,7 +115,7 @@ const Properties = () => {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="transition-smooth" onClick={() => window.open('https://www.realcommercial.com.au/agency/industrial-partners-MDWHPW', '_blank')}>
+          <Button size="lg" variant="outline" className="transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-primary hover:text-primary-foreground" onClick={() => window.open('https://www.realcommercial.com.au/agency/industrial-partners-MDWHPW', '_blank')}>
             View All Properties
           </Button>
         </div>
