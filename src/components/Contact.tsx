@@ -7,6 +7,9 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { basePath } from '@/utils/path';
 
+// Initialize EmailJS with the public key
+emailjs.init("lT46MAXOUS9h9tocd");
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -33,25 +36,22 @@ const Contact = () => {
     setSubmitStatus('idle');
 
     try {
-      // Initialize EmailJS (you'll need to replace these with your actual EmailJS credentials)
-      emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace with your EmailJS public key
-
       const templateParams = {
-        to_email: 'john@industrialpartners.com.au',
-        from_name: `${formData.firstName} ${formData.lastName}`,
-        from_email: formData.email,
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
         phone: formData.phone,
         inquiry_type: formData.inquiryType,
         message: formData.message,
-        reply_to: formData.email
+        time: new Date().toLocaleString()
       };
 
-      await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      const response = await emailjs.send(
+        'service_ox3eub9',    // Service ID
+        'template_gdlf1kq',   // Template ID
         templateParams
       );
 
+      console.log('Email sent successfully:', response);
       setSubmitStatus('success');
       setFormData({
         firstName: '',
