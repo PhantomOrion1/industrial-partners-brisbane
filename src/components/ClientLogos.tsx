@@ -2,17 +2,14 @@ import { basePath } from '@/utils/path';
 
 const ClientLogos = () => {
   const clients = [
-    { name: "Kimberly-Clark", logo: `${basePath}Kimberly-Clark_Logo.png`, size: "h-8 md:h-10" },
-    { name: "Nestlé", logo: `${basePath}nestle-9-logo-png-transparent.png`, size: "h-12 md:h-20" },
-    { name: "PepsiCo", logo: `${basePath}PepsiCo_logo.svg`, size: "h-10 md:h-16" },
-    { name: "BP", logo: `${basePath}bp-logo-png-transparent.webp`, size: "h-12 md:h-20" },
-    { name: "Bridgestone", logo: `${basePath}Bridgestone-Logo-e1607987001589.webp`, size: "h-10 md:h-16" },
-    { name: "Coca-Cola", logo: `${basePath}Coca-Cola-logo.png`, size: "h-10 md:h-16" },
-    { name: "Harvey Norman", logo: `${basePath}HarveryNorman-logo-stacked.png`, size: "h-10 md:h-16" },
-    { name: "OTIS", logo: `${basePath}2560px-Otis_logo.SVG.png`, size: "h-8 md:h-14" },
     { name: "China CITIC Bank", logo: `${basePath}601998.SS_BIG-0099d861.png`, size: "h-10 md:h-16" },
-    { name: "EADS", logo: `${basePath}eads-seeklogo.png`, size: "h-14 md:h-24" },
-    { name: "Energex", logo: `${basePath}Energex_logo.png`, size: "h-10 md:h-16" }
+    { name: "AGL Energy", logo: `${basePath}AGL_Energy_logo.svg`, size: "h-12 md:h-18" },
+    { name: "BCI Bus", logo: `${basePath}BCI_Bus_logo.svg.png`, size: "h-10 md:h-16" },
+    { name: "Cleanaway", logo: `${basePath}cleanaway-logo-svg-vector.svg`, size: "h-8 md:h-14" },
+    { name: "CPE Capital", logo: `${basePath}CPEcapital (1).png`, size: "h-10 md:h-16" },
+    { name: "Opal Australian Paper", logo: `${basePath}opal_australian paper master_purple1_rgb.png`, size: "h-8 md:h-14" },
+    { name: "United Heavy", logo: `${basePath}UnitedHeavy (1).png`, size: "h-10 md:h-16" },
+    { name: "Veolia", logo: `${basePath}Veolia_logo.svg.png`, size: "h-10 md:h-16" }
   ];
 
   // Create multiple cycles for seamless infinite loop
