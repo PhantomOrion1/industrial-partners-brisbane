@@ -118,7 +118,7 @@ const About = () => {
               <div className="lg:col-span-1">
                 <div className="grid gap-6">
                   <div className="bg-card rounded-lg p-4 text-center fade-in-delay">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">200+</h3>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">100+</h3>
                     <p className="text-sm font-medium text-muted-foreground">Properties Transacted</p>
                   </div>
                   <div className="bg-card rounded-lg p-4 text-center fade-in-delay">
