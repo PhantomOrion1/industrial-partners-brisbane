@@ -15,7 +15,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-safe pt-20 md:pt-safe">
+    <section id="home" className="relative min-h-screen flex items-center pt-safe pt-20 md:pt-safe" style={{ paddingTop: 'max(5rem, 20vh)' }}>
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         {canPlayVideo ? (
