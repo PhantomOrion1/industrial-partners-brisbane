@@ -1,4 +1,2 @@
-// Conditionally set base path for different deployment environments
-export const basePath = import.meta.env.PROD && !import.meta.env.VITE_VERCEL 
-  ? "/industrial-partners-brisbane/" 
-  : "/"; 
+// Use root path for all deployments (simplified for Vercel compatibility)
+export const basePath = "/"; 

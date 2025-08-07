@@ -10,18 +10,13 @@ import JohnLegg from "./pages/JohnLegg";
 
 const queryClient = new QueryClient();
 
-// Conditionally set basename for different deployment environments
-const basename = import.meta.env.PROD && !import.meta.env.VITE_VERCEL 
-  ? "/industrial-partners-brisbane" 
-  : "";
-
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <SonnerToaster />
-        <BrowserRouter basename={basename}>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
