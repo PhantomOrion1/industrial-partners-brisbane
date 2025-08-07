@@ -103,7 +103,7 @@ const About = () => {
                 <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Our Story</h2>
                 <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
                   <p>
-                    Industrial Partners has been Brisbane's trusted name in industrial real estate for over three decades. Founded with a vision to provide unparalleled service in warehouse sales and leasing, we've built our reputation on deep market knowledge and personalised client relationships.
+                    John Legg has been Brisbane's trusted name in industrial real estate for over three decades. Founded with a vision to provide unparalleled service in warehouse sales and leasing, we've built our reputation on deep market knowledge and personalised client relationships.
                   </p>
                   <p>
                     Our expertise spans across Brisbane's key industrial corridors, from Acacia Ridge to Yatala, helping businesses find the perfect industrial spaces for their operations. Whether you're looking to buy, sell, or lease warehouse facilities, our team provides strategic guidance backed by years of market experience.
