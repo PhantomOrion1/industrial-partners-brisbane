@@ -171,9 +171,15 @@
   }
 }
 
-/* Very short viewport protection - only for extreme cases */
-@media (max-height: 400px) {
+/* Viewport height protection for overlapping text */
+@media (max-height: 700px) {
   #home {
     padding-top: 6rem !important;
+  }
+}
+
+@media (max-height: 500px) {
+  #home {
+    padding-top: 8rem !important;
   }
 }
