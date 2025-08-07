@@ -137,6 +137,7 @@ const About = () => {
             <div className="mb-20">
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-foreground mb-4">In the News</h2>
+                <p className="text-muted-foreground">Click to view full article</p>
               </div>
               
               <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
