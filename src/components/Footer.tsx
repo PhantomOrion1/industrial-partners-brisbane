@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-primary-foreground/60 mr-3" />
-                <span className="text-primary-foreground/80">12 Hazelmere Parade, SHERWOOD, QLD 4075</span>
+                <span className="text-primary-foreground/80">8 Camelot Street Tennyson, QLD 4105</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-primary-foreground/60 mr-3" />

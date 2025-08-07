@@ -84,9 +84,9 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Office",
-      details: "12 Hazelmere Parade, SHERWOOD, QLD 4075",
-      description: "Visit our office"
+      title: "Visit our office",
+      details: "8 Camelot Street Tennyson, QLD 4105",
+      action: () => window.open('https://maps.google.com', '_blank')
     },
     {
       icon: Clock,
