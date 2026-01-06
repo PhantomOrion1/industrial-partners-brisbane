@@ -95,7 +95,7 @@
 }
 
 /* Animation classes */
-.fade-in {
+  .fade-in {
   animation: fadeIn 1s ease-out;
 }
 
@@ -113,23 +113,23 @@
 
 .fade-in-delay-3 {
   animation: fadeIn 1s ease-out 0.3s both;
-}
-
-.slide-up {
+  }
+  
+  .slide-up {
   animation: slideUp 0.8s ease-out;
-}
-
-.scale-in {
+  }
+  
+  .scale-in {
   animation: scaleIn 0.6s ease-out;
-}
+  }
 
 .animate-infinite-scroll {
-  animation: infinite-scroll 80s linear infinite;
-}
-
+  animation: infinite-scroll 60s linear infinite;
+  }
+  
 .animate-infinite-scroll-mobile {
-  animation: infinite-scroll-mobile 40s linear infinite;
-}
+  animation: infinite-scroll-mobile 30s linear infinite;
+  }
 
 /* Safe area support */
 @supports (padding: max(0px)) {
@@ -145,7 +145,7 @@
   .pr-safe {
     padding-right: max(env(safe-area-inset-right), 1rem);
   }
-}
+  }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {

@@ -9,7 +9,8 @@ const ClientLogos = () => {
     { name: "CPE Capital", logo: `${basePath}CPEcapital (1).png`, size: "h-10 md:h-16" },
     { name: "Opal Australian Paper", logo: `${basePath}opal_australian paper master_purple1_rgb.png`, size: "h-8 md:h-14" },
     { name: "United Heavy", logo: `${basePath}UnitedHeavy (1).png`, size: "h-10 md:h-16" },
-    { name: "Veolia", logo: `${basePath}Veolia_logo.svg.png`, size: "h-10 md:h-16" }
+    { name: "Veolia", logo: `${basePath}Veolia_logo.svg.png`, size: "h-10 md:h-16" },
+    { name: "Macquarie", logo: `${basePath}MacquarieLogo.png`, size: "h-10 md:h-16" }
   ];
 
   // Create multiple cycles for seamless infinite loop
