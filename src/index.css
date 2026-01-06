@@ -124,11 +124,11 @@
   }
 
 .animate-infinite-scroll {
-  animation: infinite-scroll 60s linear infinite;
+  animation: infinite-scroll 45s linear infinite;
   }
   
 .animate-infinite-scroll-mobile {
-  animation: infinite-scroll-mobile 30s linear infinite;
+  animation: infinite-scroll-mobile 22s linear infinite;
   }
 
 /* Safe area support */
